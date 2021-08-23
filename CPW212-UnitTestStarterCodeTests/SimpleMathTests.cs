@@ -49,7 +49,34 @@ namespace CPW212_UnitTestStarterCode.Tests
         }
 
         // TODO: Test Divide method with two valid numbers
-
+        [TestMethod]// ?/?
+        [DataRow(5, 11)]
+        [DataRow(31, 120)]
+        [DataRow(-1, -10)]
+        [DataRow(0, 3)]
+        public void Divide_TwoNumbers_ReturnsProduct(double num1, double num2)
+        {
+            //get expected outcome
+            double answer = num1 * num2;
+            //current outcome from method
+            double Result = SimpleMath.Divide(num1, num2);
+            // Use a few pairs of values to test the Multiply method
+            Assert.AreEqual(Result, answer);
+        }
         // TODO: Test subtract method with two valid numbers
+        [TestMethod]// ?/?
+        [DataRow(5, 1)]
+        [DataRow(31, 10)]
+        [DataRow(-1, -10)]
+        [DataRow(0, 3)]
+        public void subtract_TwoNumbers_ReturnsSum(double num1, double num2)
+        {
+            //get expected outcome
+            double answer = num1 * num2;
+            //current outcome from method
+            double Result = SimpleMath.Subtract(num1, num2);
+            // Use a few pairs of values to test the Multiply method
+            Assert.AreEqual(Result, answer);
+        }
     }
 }
